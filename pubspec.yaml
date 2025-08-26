@@ -1,0 +1,31 @@
+name: tasky_clean_cubit
+description: A Flutter task manager using Clean Architecture + Cubit with mocked services.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  collection: ^1.18.0
+  cupertino_icons: ^1.0.8
+  equatable: ^2.0.5
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.3
+  flutter_secure_storage: ^9.2.2
+  get_it: ^7.7.0
+  go_router: ^14.2.0
+  uuid: ^4.4.2
+
+dev_dependencies:
+  bloc_test: ^9.1.7
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  mocktail: ^1.0.4
+  very_good_analysis: ^6.0.0
+
+flutter:
+  uses-material-design: true
