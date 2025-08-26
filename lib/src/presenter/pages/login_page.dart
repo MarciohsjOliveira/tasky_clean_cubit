@@ -63,6 +63,8 @@ class _LoginPageState extends State<LoginPage> {
                             const SizedBox(height: 16),
                             AppTextField(
                               controller: _email,
+                              autofillHints: const [AutofillHints.email],
+                              textInputAction: TextInputAction.next,
                               label: 'Email',
                               keyboardType: TextInputType.emailAddress,
                               validator: (v) => v != null && v.contains('@')

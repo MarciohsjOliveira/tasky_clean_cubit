@@ -62,6 +62,8 @@ class _RegisterPageState extends State<RegisterPage> {
                           children: [
                             AppTextField(
                                 controller: _name,
+                                autofillHints: const [AutofillHints.name],
+                                textInputAction: TextInputAction.next,
                                 label: 'Name',
                                 validator: (v) =>
                                     (v != null && v.trim().isNotEmpty)
@@ -70,6 +72,8 @@ class _RegisterPageState extends State<RegisterPage> {
                             const SizedBox(height: 12),
                             AppTextField(
                                 controller: _email,
+                                autofillHints: const [AutofillHints.email],
+                                textInputAction: TextInputAction.next,
                                 label: 'Email',
                                 keyboardType: TextInputType.emailAddress,
                                 validator: (v) => v != null && v.contains('@')
@@ -78,6 +82,8 @@ class _RegisterPageState extends State<RegisterPage> {
                             const SizedBox(height: 12),
                             AppTextField(
                                 controller: _password,
+                                autofillHints: const [AutofillHints.newPassword],
+                                textInputAction: TextInputAction.done,
                                 label: 'Password',
                                 obscure: true,
                                 validator: (v) => v != null && v.length >= 6
